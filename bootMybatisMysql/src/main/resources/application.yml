@@ -1,0 +1,26 @@
+server:
+  port: 8091
+
+# 뷰  
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+# 서버 자동 재실행
+  devtools:
+    livereload:
+      enabled: true
+      
+# 마이바티스 dataSource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/campusdb?charsetEncoding=utf-8
+    username: root
+    password: Qlalfqjsgh11
+    
+# mybatis에서 패키지 생략할 수 있도록 설정
+mybatis:
+  type-aliases-package: com.campus.myapp.vo
+  mapper-locations: mapper/*Mapper.xml
